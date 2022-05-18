@@ -3,13 +3,15 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import {
   Button,
+  Box,
+  Heading,
   Image,
   Input,
   InputGroup,
   InputRightAddon,
-  List,
-  ListItem,
   Stack,
+  Wrap,
+  WrapItem,
 } from '@chakra-ui/react'
 import { PlusSquareIcon } from '@chakra-ui/icons'
 import cupImg from '../../lib/images/cup.png'
@@ -31,13 +33,24 @@ function NewGame() {
   return !running ? (
     <Stack spacing={3}>
       <Image src={cupImg}></Image>
-      <List spacing={3}>
-        {playerList.map((player, i) => {
-          return <ListItem key={i}>{player}</ListItem>
-        })}
-      </List>
+      <Box>
+        {playerList.length == 0 ? (
+          <Heading>Who wants to play?</Heading>
+        ) : (
+          <>
+            <Heading>Player List</Heading>
+            <Wrap boxShadow={'outline'} m={2} p={2} spacing={3}>
+              {playerList.map((player, i) => {
+                return <WrapItem key={i}>{player}</WrapItem>
+              })}
+            </Wrap>
+          </>
+        )}
+      </Box>
       <InputGroup>
         <Input
+          bgColor={'gray.200'}
+          color={'gray.600'}
           type="text"
           id="palyerName"
           placeholder="Add a player"
@@ -45,12 +58,12 @@ function NewGame() {
           onChange={(evt) => setName(evt.target.value)}
         />
         <InputRightAddon>
-          <PlusSquareIcon m={3} onClick={handleSubmit}>
+          <PlusSquareIcon color={'gray.600'} onClick={handleSubmit}>
             +
           </PlusSquareIcon>
         </InputRightAddon>
       </InputGroup>
-      <Button m={6} onClick={() => dispatch(firstCard())}>
+      <Button color={'gray.600'} m={6} onClick={() => dispatch(firstCard())}>
         Start Game
       </Button>
     </Stack>
