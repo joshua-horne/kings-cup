@@ -32,6 +32,9 @@
     "prettier": "2.4.1",
     "prop-types": "^15.7.2",
     "rimraf": "^3.0.2",
+    "react-redux": "^8.0.1",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",
@@ -47,6 +50,7 @@
     "knex": "^1.0.7",
     "react": "^18.1.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "superagent": "^7.1.2"
   }
 }

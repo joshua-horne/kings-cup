@@ -1,13 +1,17 @@
 import React from 'react';
-import createRoot from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
 import { ChakraProvider } from '@chakra-ui/react';
+
+import store from './store';
 import App from './App';
 
-createRoot.render(
+createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ChakraProvider>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </ChakraProvider>
-  </React.StrictMode>,
-  document.querySelector('#root')
+  </React.StrictMode>
 );

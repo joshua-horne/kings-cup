@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 // Serve API requests from the router
-app.use('/api', router);
+app.use('/api/v1', router);
 
 // Serve app production bundle
 app.use(express.static('dist/app'));
