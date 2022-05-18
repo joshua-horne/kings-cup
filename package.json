@@ -1,6 +1,6 @@
 {
-  "name": "vite-react-express-boilerplate",
-  "version": "0.0.0",
+  "name": "kings-cup",
+  "version": "0.0.1",
   "scripts": {
     "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
     "client:dev": "vite",
@@ -20,7 +20,8 @@
     "babel-loader": "^8.2.2",
     "concurrently": "^6.2.1",
     "eslint": "^8.13.0",
-    "eslint-config-eda": "^1.1.0",    "http-proxy-middleware": "^2.0.1",
+    "eslint-config-eda": "^1.1.0",
+    "http-proxy-middleware": "^2.0.1",
     "nodemon": "^2.0.13",
     "prop-types": "^15.7.2",
     "react-redux": "^8.0.1",
