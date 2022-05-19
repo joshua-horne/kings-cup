@@ -4,14 +4,17 @@ const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: 'blue.700',
-        color: 'white',
+        bg: 'red.700',
+        color: 'gray.50',
       },
     },
   },
   fonts: {
     heading: 'Cinzel, serif',
     body: 'Cinzel, serif',
+  },
+  shadows: {
+    outline: '0 0 0 3px rgba(240, 242, 27, 0.8)',
   },
 })
 
