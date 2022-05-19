@@ -9,7 +9,8 @@
     "client:build": "vite build",
     "build": "npm run server:build && npm run client:build",
     "serve": "vite preview",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
