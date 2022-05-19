@@ -1,6 +1,6 @@
 {
-  "name": "vite-react-express-boilerplate",
-  "version": "0.0.0",
+  "name": "kings-cup",
+  "version": "0.0.1",
   "scripts": {
     "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
     "client:dev": "vite",
@@ -12,6 +12,8 @@
     "start": "node dist/server.js"
   },
   "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.7",
     "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
@@ -20,7 +22,8 @@
     "babel-loader": "^8.2.2",
     "concurrently": "^6.2.1",
     "eslint": "^8.13.0",
-    "eslint-config-eda": "^1.1.0",    "http-proxy-middleware": "^2.0.1",
+    "eslint-config-eda": "^1.1.0",
+    "http-proxy-middleware": "^2.0.1",
     "nodemon": "^2.0.13",
     "prop-types": "^15.7.2",
     "react-redux": "^8.0.1",
@@ -29,9 +32,11 @@
     "vite": "^2.5.10"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.0",
     "@chakra-ui/react": "^2.0.0",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
+    "@fontsource/cinzel": "^4.5.7",
     "dotenv": "^16.0.0",
     "express": "^4.17.1",
     "framer-motion": "^6.3.3",

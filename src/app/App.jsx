@@ -1,18 +1,24 @@
-import React from 'react';
+import React from 'react'
 
-import ErrorMessage from './components/ErrorMessage';
-import NewGame from './components/NewGame';
-import Game from './components/Game';
+import { Box, Container, Heading } from '@chakra-ui/react'
+
+import ErrorMessage from './components/ErrorMessage'
+import NewGame from './components/NewGame'
+import Game from './components/Game'
 
 function App() {
   return (
     <>
-      <h1>Kings Cup</h1>
-      <ErrorMessage />
-      <NewGame />
-      <Game />
+      <Container>
+        <Box textAlign={'center'} py={20}>
+          <Heading m={3}>Kings Cup</Heading>
+          <ErrorMessage />
+          <NewGame />
+          <Game />
+        </Box>
+      </Container>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
