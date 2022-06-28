@@ -43,6 +43,7 @@ function Card() {
     <Stack>
       <Heading>Your Card {playerList[activeIndex]}!</Heading>
       <Image src={card.image} />
+      {/* TODO: onClick of question icon display detailed card effects */}
       <Heading>
         Card Effect: {cardEffect} <QuestionIcon />
       </Heading>
