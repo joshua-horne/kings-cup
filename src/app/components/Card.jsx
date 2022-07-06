@@ -7,13 +7,14 @@ import { QuestionIcon } from '@chakra-ui/icons'
 import { fetchEffect, receiveKing } from '../actions'
 
 import Replay from './Replay'
+import Effectmodal from './EffectModal'
 
 function Card() {
   const card = useSelector((state) => state.card)
   const kingCounter = useSelector((state) => state.kingCounter)
   const playerList = useSelector((state) => state.players)
 
-  let [cardEffect, setEffect] = useState('')
+  let [cardEffect, setEffect] = useState({})
   let [activeIndex, setIndex] = useState(0)
   let [nextIndex, setNext] = useState(1)
 
@@ -43,9 +44,9 @@ function Card() {
     <Stack>
       <Heading>Your Card {playerList[activeIndex]}!</Heading>
       <Image src={card.image} />
-      {/* TODO: onClick of question icon display detailed card effects */}
       <Heading>
-        Card Effect: {cardEffect} <QuestionIcon />
+        Card Effect: {cardEffect.title}{' '}
+        <Effectmodal title={cardEffect.title} detail={cardEffect.detail} />
       </Heading>
       <Text>Remaining Cards: {card.remaining}</Text>
       <Text>Remaining Kings: {kingCounter}</Text>
